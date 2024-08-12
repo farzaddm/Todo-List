@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #e1d5f7 50%, #a68fe1 50%);
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+.header h1 {
+    background-color: #a68fe1;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 20px;
+}
+
+.list {
+    flex-grow: 1; /* اجازه می‌دهد لیست فضای باقیمانده را پر کند */
+}
+
+.list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.new-item-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.new-item-form input[type="text"] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.new-item-form button {
+    background-color: #a68fe1;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+footer {
+    font-size: 12px;
+    color: #a68fe1;
+    text-align: center;
+    padding: 10px;
+}

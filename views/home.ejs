@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <%= listTitle %>
+            </h1>
+        </div>
+        <div class="list">
+            <ul>
+                <form action="/delete" method="post">
+                    <% items.forEach((item)=> { %>
+                        <li>
+                            <input type="checkbox" name="checkbox" value="<%= item._id %>"
+                                onChange="this.form.submit()">
+                            <label>
+                                <%= item.name %>
+                            </label>
+                        </li>
+                        <% }) %>
+                        <input type="hidden" name="listName" value="<%= listTitle %>">
+                </form>
+            </ul>
+        </div>
+        <form action="/add" method="POST" class="new-item-form">
+            <input type="text" name="newItem" placeholder="New Item">
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright 2018 The App Brewery</p>
+    </footer>
+</body>
+
+</html>
